@@ -6,7 +6,7 @@ function saludarUsuario () {
 }
 saludarUsuario ();
 //declaro mis variables con la palabra reservada let
-let notaCarlos = 80;
+let notaCarlos = 60;
 let notaJulia = 70;
 let notaPedro = 60;
 let notaOlivia = 65;
@@ -44,7 +44,7 @@ let notasPrimerGrado = [80, 70, 60, 65];
 for (let i = 0; i < notasPrimerGrado.length; i++) {
   let grado = notasPrimerGrado[i];
   if (grado >= 70) {
-    console.log("Estudiante " + (i + 1) + " Arpueba");
+    console.log("Estudiante " + (i + 1) + " Aprueba");
   } else {
     console.log("Estudiante " + (i + 1) + " Reprueba");
   }
