@@ -13,7 +13,7 @@ let notaOlivia = 65;
 //utilizo condicional e incluyo alertas
 if (notaCarlos >= 70) {
   console.log("Carlos Aprobado");
-  alert ("Carlos ha aprobado el curso")
+  alert ("El estudiante Carlos ha aprobado el curso")
 } else {
   console.log("Carlos Reprobado");
   alert ("Carlos ha reprobado el curso")
