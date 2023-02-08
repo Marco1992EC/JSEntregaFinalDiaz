@@ -89,3 +89,23 @@ console.log(RinconOruga)
 sessionStorage.setItem("NumeroAlumnos", "4")
 let NumeroAlumnos = sessionStorage.getItem("NumeroAlumnos")
 console.log(NumeroAlumnos)
+//JSON
+// Almaceno el objeto JSON en el almacenamiento local
+let misestudiantes = [
+  { nombre: "Carlos", materia: "Matemáticas", nota: 60 },
+  { nombre: "Julia", materia: "Física", nota: 70 },
+  { nombre: "Pedro", materia: "Física", nota: 60 },
+  { nombre: "Olivia", materia: "Programación", nota: 65 }
+];
+
+localStorage.setItem("misestudiantes", JSON.stringify(estudiantes));
+
+// Recupero el objeto JSON y lo parseo
+let getEstudiante = JSON.parse(localStorage.getItem("misestudiantes"));
+
+// Accedo a los valores individuales dentro del objeto JSON
+getEstudiante.forEach(estudiante => {
+  console.log(`Nombre del estudiante: ${estudiante.nombre}`);
+  console.log(`Materia: ${estudiante.materia}`);
+  console.log(`Nota: ${estudiante.nota}`);
+});
