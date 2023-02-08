@@ -1,0 +1,176 @@
+h1 {
+  color: red;
+  font-size: 3rem;
+  margin-top: 3rem;
+  font-family: "Courier New", Courier, monospace;
+}
+#titulo {
+  font-size: 36px;
+  color: #98248c;
+}
+p {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.opciones-menu {
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.colorheader {
+  background-color: #c0e6ed;
+}
+
+.encabezado {
+  background-color: #cbde6a;
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu {
+  background-color: #cbde6a;
+  grid-area: nav;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 95%;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #cbde6a;
+}
+
+.contenido {
+  background-color: #c0e6ed;
+  grid-area: main;
+}
+
+.pie {
+  background-color: #91568b;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+body {
+  background-color: #cbde6a;
+}
+
+nav {
+  margin-top: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.lista-nav li {
+  display: inline;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.lista-nav li a {
+  color: white;
+  background-color: #98248c;
+  padding: 10px;
+}
+
+footer {
+  margin-top: 10rem;
+  font-size: 1.2rem;
+}
+
+.formulario {
+  margin-bottom: 100px;
+}
+#Estudiantes {
+  font-size: 32px;
+  color: #292e0e;
+}
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 100px auto 100px;
+    grid-template-areas: "header header" "nav nav" "main main" "footer footer";
+  }
+}
+@media screen and (max-width: 500px) {
+  grid-container {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 100px auto 100px;
+    grid-template-areas: "header" "nav" "main" "footer";
+  }
+}
+.menu ul {
+  flex-direction: column;
+}
+
+.foto1 {
+  width: 20rem;
+  height: 20rem;
+}
+
+.foto2 {
+  width: 20rem;
+  height: 20rem;
+}
+
+.foto3 {
+  width: 20rem;
+  height: 20rem;
+}
+
+.foto4 {
+  width: 20rem;
+  height: 20rem;
+}
+
+#carouselExampleIndicators {
+  width: 20%;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 210px;
+}
+
+.acerca {
+  background-color: #c0e6ed;
+}
+
+.grid-container {
+  width: 80%;
+  margin: 0 auto;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 100px auto 150px;
+  grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
+}
