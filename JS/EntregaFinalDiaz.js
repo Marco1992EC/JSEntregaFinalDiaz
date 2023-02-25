@@ -92,7 +92,6 @@ const estudiantes = [
   { nombre: "Pedro", materia: "Física", nota: 60 },
   { nombre: "Olivia", materia: "Programación", nota: 65 }
 ];
-
 estudiantes.forEach(estudiante => {
   const tarjeta = crearTarjeta(
     estudiante.nombre,
@@ -102,7 +101,6 @@ estudiantes.forEach(estudiante => {
     // Añado la tarjeta al contenedor
     listaEstudiantes.appendChild(tarjeta);
     });
-
   //Uso Storage 
 //local
 localStorage.setItem ("RinconOruga","Clase2023")
@@ -189,7 +187,6 @@ function buscarEstudiante() {
     });
     return;
   }
-
   const listaEstudiantes = document.querySelector("#Estudiantes");
   listaEstudiantes.innerHTML = "";
   
@@ -200,6 +197,21 @@ function buscarEstudiante() {
     }
   });
 }
+//uso promesas
+const eventoPromesa = (respuesta) => {
+  return new Promise((resolve, reject) => {
+    if (respuesta === true) {
+      resolve("se cumplió la promesa")
+    } else {
+      reject("No se cumplió la promesa")
+    } 
+  })
+}
+eventoPromesa(true)
+  .then(resultado => console.log(resultado))
+  .catch(error => console.error(error))
+
+
 // API usada de páises
 const url = "https://restcountries.com/v2/name/ecuador";
 
@@ -222,4 +234,3 @@ fetch(url)
     console.log(`Moneda: ${moneda}`);
     console.log(`Bandera: ${bandera}`);
   })
-  
