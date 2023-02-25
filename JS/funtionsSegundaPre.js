@@ -1,5 +1,5 @@
 
-//es un simulador de aprobación de notas de 4 estudiantes, que si tienen una nota mayor o igual a 70 entonces aprueban, caso contrario reprueban
+//es un simulador de aprobación de notas de 4 estudiantes, que si tienen una nota mayor o igual a 70 entonces aprueban, caso contrario reprueban en el que se muestra una barra de búsqueda para ingresar el nombre de uno de los 4 estudaintes habilitados
 
 //utilizo una clase constructora que cuenta con un constructor que inicializa un array con los estudiantes, y tres métodos: "saludarUsuario" "buscarEstudiante" y "promedioMateria. uso array estudiantes
 class NotasEstudiantes {
