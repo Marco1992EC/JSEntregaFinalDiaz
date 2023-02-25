@@ -37,7 +37,6 @@ function buscarEstudiante() {
     }
   });
 }
-
 //creo cards con DOM
 // Obtengo la lista de estudiantes
 const listaEstudiantes = document.querySelector("#Estudiantes");
@@ -135,14 +134,13 @@ getEstudiante.forEach(estudiante => {
   console.log(`Nota: ${estudiante.nota}`);
 });
 
-// Obtener el botón de buscar
+// botón de buscar
 const botonBuscar = document.querySelector("#buscar");
 
-// Agregar un evento de clic al botón de buscar
+// evento de click al botón de buscar
 botonBuscar.addEventListener("click", function() {
-  // Obtener el valor del campo de búsqueda
+  // se obtiene el valor del campo de búsqueda
   const nombreBuscado = document.querySelector("#nombreBuscado").value;
-  // Recorrer la lista de estudiantes para encontrar el estudiante buscado
   let estudianteEncontrado = false;
   estudiantes.forEach(estudiante => {
     if (estudiante.nombre === nombreBuscado) {
@@ -158,7 +156,7 @@ botonBuscar.addEventListener("click", function() {
     }
   });
     });
-      // Mostrar mensaje si el estudiante no fue encontrado con sweet alert
+      // Mostrar mensaje si el estudiante no fue encontrado usando sweet alert de tipo error
 function buscarEstudiante() {
   const buscarInput = document.querySelector("#buscar");
   const buscarTexto = buscarInput.value;
@@ -202,9 +200,26 @@ function buscarEstudiante() {
     }
   });
 }
+// API usada de páises
+const url = "https://restcountries.com/v2/name/ecuador";
 
+// GET para obtener información sobre el país Ecuador
+fetch(url)
+// respuesta en formato JSON
+  .then(response => response.json()) 
+  .then(data => {
+    // se accede a la información específica sobre Ecuador en el objeto de respuesta
+    const nombre = data[0].name;
+    const capital = data[0].capital;
+    const poblacion = data[0].population;
+    const moneda = data[0].currencies[0].name;
+    const bandera = data[0].flag;
 
-fetch('https://restcountries.com/v3.1/all')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+    // Uso la información mostrar en consola
+    console.log(`Nombre: ${nombre}`);
+    console.log(`Capital: ${capital}`);
+    console.log(`Población: ${poblacion}`);
+    console.log(`Moneda: ${moneda}`);
+    console.log(`Bandera: ${bandera}`);
+  })
+  
